@@ -52,6 +52,156 @@
       }
     },
     {
+      "name": "or_high_low",
+      "operation-type": "search",
+      "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+      "response-compression-enabled": false,
+      "body": {
+        "query": {
+          "bool": {
+            "should": [
+              {
+                "term": {
+                  "body": "study"
+                }
+              },
+              {
+                "term": {
+                  "body": "patella"
+                }
+              }
+            ]
+          }
+        },
+	"_source": false
+      }
+    },
+    {
+      "name": "or_high_high",
+      "operation-type": "search",
+      "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+      "response-compression-enabled": false,
+      "body": {
+        "query": {
+          "bool": {
+            "should": [
+              {
+                "term": {
+                  "body": "study"
+                }
+              },
+              {
+                "term": {
+                  "body": "article"
+                }
+              }
+            ]
+          }
+        },
+	"_source": false
+      }
+    },
+    {
+      "name": "or_high_med",
+      "operation-type": "search",
+      "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+      "response-compression-enabled": false,
+      "body": {
+        "query": {
+          "bool": {
+            "should": [
+              {
+                "term": {
+                  "body": "study"
+                }
+              },
+              {
+                "term": {
+                  "body": "crystallographic"
+                }
+              }
+            ]
+          }
+        },
+	"_source": false
+      }
+    },
+    {
+      "name": "and_high_low",
+      "operation-type": "search",
+      "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+      "response-compression-enabled": false,
+      "body": {
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "body": "study"
+                }
+              },
+              {
+                "term": {
+                  "body": "patella"
+                }
+              }
+            ]
+          }
+        },
+	"_source": false
+      }
+    },
+    {
+      "name": "and_high_high",
+      "operation-type": "search",
+      "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+      "response-compression-enabled": false,
+      "body": {
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "body": "study"
+                }
+              },
+              {
+                "term": {
+                  "body": "article"
+                }
+              }
+            ]
+          }
+        },
+	"_source": false
+      }
+    },
+    {
+      "name": "and_high_med",
+      "operation-type": "search",
+      "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
+      "response-compression-enabled": false,
+      "body": {
+        "query": {
+          "bool": {
+            "must": [
+              {
+                "term": {
+                  "body": "study"
+                }
+              },
+              {
+                "term": {
+                  "body": "crystallographic"
+                }
+              }
+            ]
+          }
+        },
+	"_source": false
+      }
+    },
+    {
       "name": "articles_monthly_agg_uncached",
       "operation-type": "search",
       "#COMMENT": "Large responses cause overhead on the client when decompressing the response. Disable to avoid the overhead",
